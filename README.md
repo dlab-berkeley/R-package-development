@@ -26,7 +26,7 @@ If you haven't done, please install Git and sign up a new GitHub account.
 
 ## Setup
 
-I strongly recommend to launch the binder above. Please do so before attending the worskshop as it takes a while (especially, if you do it for the first time).
+I strongly recommend to launch the binder above. Please do so before attending the workshop as it takes a while (especially, if you do it for the first time).
 
 Or you can install required packages manually:
 
