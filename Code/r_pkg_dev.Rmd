@@ -38,10 +38,12 @@ pacman::p_load(devtools, # dev tools
 3. Check dependencies in `NAMESPACE`
   - `devtools::update()` updates the documentation 
   - `devtools::check()` to see whether your package is ready to be submitted to CRAN
-4. Build a package 
-  - `devtools::build()` build a package from sources (a binary version)
+4. Build a package (for more information, read [this section](http://r-pkgs.had.co.nz/package.html) in Hadley's R package development book)
+  - `devtools::build()` 
 5. (Optional) Test (`devtools::test()`), teach in `\vignettes`, and add data in `\data`
 6. Distribute the package either via CRAN or GitHub  
+
+![]http://r-pkgs.had.co.nz/diagrams/package-files.png
 
 # Developing an R package 
 
