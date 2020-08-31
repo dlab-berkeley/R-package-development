@@ -26,9 +26,7 @@ If you haven't done, please install Git and sign up a new GitHub account.
 
 ## Setup
 
-I strongly recommend to launch the binder above. Please do so before attending the workshop as it takes a while (especially, if you do it for the first time).
-
-Or you can install required packages manually:
+Please install required packages manually before attending the workshop:
 
 ```r
 
@@ -41,7 +39,8 @@ pacman::p_load(
     devtools, # key package 
     usethis, # workflow management 
     testthat, # for testing 
-    roxygen2 # for documentation 
+    roxygen2, # for documentation 
+    pkgdown # to build a package website
 )
 
 ```
@@ -51,5 +50,6 @@ pacman::p_load(
   - [The second edition](https://r-pkgs.org/) is now under development written by Hadley Wickam and Jerry Bryan.
 - [Writing an R package from scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) by Hilary Parker
 - [R package primer](https://kbroman.org/pkg_primer/) by Karl Broman
+- [usethis workflow for package development](https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/) by Emil Hvitfeldt 
 
 ![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

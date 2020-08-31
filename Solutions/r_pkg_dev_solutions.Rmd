@@ -1,0 +1,97 @@
+---
+title: "R package development"
+author: "Jae Yeon Kim"
+output:
+  html_document:
+    df_print: paged
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+
+> Anything that can be automated should be automated. Do as little as possible by hand. Do as much as possible with functions. 
+- Hadley Wickam
+
+# Why developing R packages? 
+
+1. Reuse your code 
+2. Automate your workflow 
+3. Help others (be part of an open source development community)
+
+# Workflow 
+
+1. Write code 
+2. Document code 
+3. Check dependencies (NAMESPACE)
+4. Build a package 
+5. Distribute the package 
+
+# Developing an R package 
+
+The 4 required components are necessary to build and distribute a minimally viable R package. The other steps are optional.
+
+```{r}
+# Load packages 
+pacman::p_load(devtools, # dev tools 
+               usethis, # workflow 
+               roxygen2, # documentation 
+               testthat) # testing 
+
+# Create a package directory 
+path <- file.path(tempdir(), "mypkg")
+create_package(path)
+
+# Initialize Git repo 
+use_git()
+
+# This creates an associated GitHub repo 
+#use_github() 
+
+# Add License 
+use_mit_license("Jae Yeon Kim")
+```
+
+## 4 Required Components
+
+1. Setup (**DESCRIPTION**)
+
+2. Write code (**R**)
+
+3. Document (**man**)
+
+4. Organize (**NAMESPACE**)
+
+## 3 Optional Components  
+
+1. Test (**test**)
+
+3. Add data (**data**)
+
+4. Teach (**vignetts**)
+
+# Building an R package 
+
+# Distributing an R package 
+
+```{r}
+available.packages("")
+```
+
+1. [CRAN (The Comprehensive R Archive Network)](https://cran.r-project.org/)
+  - R package submission should comply with [the CRAN Repository Policy](https://cran.r-project.org/)
+2. GitHub 
+  - Push everything to the Git repository (you can do it using command-line interface or RStudio).
+
+```sh 
+git add . 
+git commit -m "first push"
+git push 
+```
+  - Don't forget that your repository should be `public`.
+  - I highly recommend connecting GitHub with SSH. For more information, visit [this link](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+  
+```sh
+git remote set-url origin git@github.com:user/repo 
+```
